@@ -31,10 +31,29 @@ You can see tests inside `src/test/scala/` and run them with `sbt test`
 ### How can you deploy your app to a cluster of machines ?
 * https://spark.apache.org/docs/latest/cluster-overview.html
 
+To deploy a Spark application to a cluster of machines, we can follow these steps:
+
+Prepare our application: Make sure that our application is ready for deployment. 
+Set up our cluster: Set up a cluster of machines that meet the system requirements for running Spark.
+Configure our application: Configure our Spark application to work with the cluster. This includes specifying the master node, setting up authentication and security, and configuring any other relevant properties.
+Submit our application: Use the spark-submit script to submit your application to the cluster. This script takes your packaged application as input and launches it on the cluster.
+Monitor our application: Monitor your application as it runs on the cluster. Use the Spark web UI and logs to track the progress of your application and troubleshoot any issues that arise.
+Scale our application: If necessary, scale oour application by adding more worker nodes to the cluster or adjusting the resources allocated to each node but be carefull with great processing power comes great electricity bills.
+
+
 ### Business Intelligence (BI)
 How could use we Spark to display data on a BI tool such as [Metabase](https://www.metabase.com/) ?
 
 Tips: https://github.com/polomarcus/television-news-analyser#spin-up-1-postgres-metabase-nginxand-load-data-to-pg
+
+Here are the high-level steps to display Spark data on Metabase:
+
+Use Spark to process and analyze the data and generate insights.
+Write the results to a data sink such as a PostgreSQL database or Apache Parquet file format.
+Connect Metabase to the data sink where the results are stored.
+Configure Metabase to visualize the data in the desired format, such as charts, tables, or dashboards.
+
+
 
 ### Continuous build and test
 **Pro Tips** : https://www.scala-sbt.org/1.x/docs/Running.html#Continuous+build+and+test
